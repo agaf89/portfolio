@@ -1,0 +1,94 @@
+.menu{
+    position: fixed;
+    top: 0px;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.6s all;
+    &.active{
+        opacity: 1;
+        left: 0;
+        visibility: visible;
+    }
+    &__block{
+        padding-top: 140px;
+        padding-left: 40px;
+        position: relative;
+        background-color: $main-color;
+        width: 345px;
+        height: 100%;
+        /* left: -100%; */
+        transition: 0.6s all ;
+        z-index: 10;
+    }
+    &__close{
+        position: absolute;
+        top: 25px;
+        right: 25px;
+        cursor: pointer;
+    }
+    &__list{
+        list-style-type: none;
+        padding-left: 35px;
+    }
+    &__link {
+        position: relative;
+        font-weight: bold;
+        font-size: 24px;
+        line-height: 36px;
+        margin-bottom: 15px;
+        
+        a{
+            color: #fff;
+            text-decoration: none;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            left: -35px;
+            top: 10px;
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            border: 1px solid #212529;
+            border-radius: 50%;  
+            transition: 0.2s all;  
+        }
+        &:hover{
+            &::before{
+                background-color: white;
+                border: none
+            }
+        }
+    }
+    &_social{
+        width: 90px;
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        a{
+            &:hover{
+                svg path{
+                    fill: white;
+                }
+            }
+        }    
+    }
+    &__overlay{
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: white;
+        opacity: 0.75;
+    }
+}
