@@ -17,12 +17,23 @@
     max-width: 1140px;
     margin: 0 auto;
 }
+.divader{
+  width: 60px;
+  height: 3px;
+  background-color: $main-color;
+  margin: 25px auto 0 auto;
+}
 @import 'blocks/sidepanel';
 @import 'blocks/menu';
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/hamburger';
-
+@import 'blocks/about';
+@import 'blocks/resume';
+@import 'blocks/job';
+@import 'blocks/portfolio';
+@import 'blocks/price';
+@import 'blocks/contacts';
 #app {
     padding-top: 200px;
 	height: 100vh;
@@ -64,18 +75,18 @@
 .glitch {
     position: relative;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-	color:#212529;
-	animation: glitch-skew 1s infinite linear alternate-reverse;
-	&::before{
-		@include glitchCopy;
-		left: 2px;
-		clip: rect(44px, 450px, 56px, 0);
-		animation: glitch-anim 5s infinite linear alternate-reverse;
+    color:#212529;
+    animation: glitch-skew 2s infinite linear alternate-reverse;
+    &::before{
+      @include glitchCopy;
+      left: 2px;
+      clip: rect(44px, 450px, 56px, 0);
+      animation: glitch-anim 2s infinite linear alternate-reverse;
 	}	
 	&::after {
 		@include glitchCopy;
 		left: -2px;
-		text-shadow: -2px 0px #ff00c1, 4px 2px $main-color;
+		text-shadow: -1px 1px #ff00c1, 5px 2px $main-color;
 		animation: glitch-anim2 1s infinite linear alternate-reverse;
 	}
 }
@@ -94,7 +105,7 @@
   @for $i from 0 through $steps {
     #{percentage($i*(1/$steps))} {
       clip: rect(random(100)+px, 9999px, random(100)+px, 0);
-			transform: skew((random(100) / 100) + deg);
+			transform: skew((random(100) / 90) + deg);
     }
   }
 }

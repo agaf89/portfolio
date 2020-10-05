@@ -1,0 +1,108 @@
+.job{
+    padding: 120px 0 0 0;
+
+    &__title{
+        text-align: center;
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 36px;
+            height: 36px;
+            border-radius: 100%;
+            background: $main-color;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -6px;
+            
+        }
+    }
+    &__subtitle{
+        text-align: center;
+    }
+    &__wrapper{
+        padding: 60px 10px 0 10px;
+        display: grid;
+        grid-template: repeat(2, minmax(270px, 270px)) / repeat(4, minmax(270px, auto));
+        grid-auto-rows: minmax(270px, auto);
+        column-gap: 13px;
+        row-gap: 13px;
+        &-item{
+            border: 1px solid #212529;
+            padding: 30px 30px 25px 30px;
+            &:nth-child(4){
+                .wid65px{
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+        &-descr{
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 0px;
+        }
+        &-title{
+            margin-bottom: 15px;
+            font-weight: bold;
+            font-size: 14px;
+        }
+    }
+    .list{
+        padding-top: 120px;
+        display: grid;
+        grid-template-columns: repeat(3, 350px);
+        grid-template-rows: repeat(2, 70px);
+        justify-content: space-between;
+        column-gap: 45px;
+        row-gap: 30px;
+        &__item{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            &-head{
+                display: flex;
+                justify-content: space-between;
+
+            }
+            &-skill{
+                font-weight: bold;
+                padding-left: 14px;
+                position: relative;
+                font-size: 14px;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    z-index: -1;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 100%;
+                    background: $main-color;
+                    left: 0;
+                    top: -8px;
+                }
+            }
+            &-percent{
+                font-size: 14px;
+            }
+            &-footer{
+                margin-top: 27px;
+                width: 350px;
+                height: 14px;
+                background: #E8E4DE;
+                border-radius: 4px;
+            }
+            &-active{
+                height: 14px;
+                background: $main-color;
+                border-radius: 4px;
+            }
+        }
+        
+    }
+}
+.wid65px{
+    height: 65px;
+    margin-bottom: 20px;
+}
