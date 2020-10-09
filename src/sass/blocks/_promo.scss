@@ -2,7 +2,7 @@
 .promo{
     min-height: 100vh;
     position: relative;
-    background: url('../img/promo_bg.jpg') no-repeat 90%/cover;
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
     padding-top: 200px;
     text-align: center;
     &__img{

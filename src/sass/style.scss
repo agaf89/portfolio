@@ -34,8 +34,10 @@
 @import 'blocks/portfolio';
 @import 'blocks/price';
 @import 'blocks/contacts';
+
+
 #app {
-    padding-top: 200px;
+  padding-top: 200px;
 	height: 100vh;
 	width: 100%;
 	margin: 0;
@@ -44,8 +46,7 @@
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
-	background: url('../img/promo_bg.jpg');
-	background-size: cover;
+  background-image: linear-gradient(-225deg, #FFFEFF 0%, #D7FFFE 100%);	background-size: cover;
 	background-position: center;
 	z-index: 1;
 }
@@ -55,8 +56,7 @@
 }
 .sub {
     font-weight: 700;
-    
-	
+    margin-bottom: 10px;
 }
 .from{
     display: block;
@@ -118,4 +118,5 @@
   }
 }
 
-@import 'blocks/buttons'
+@import 'blocks/buttons';
+@import 'blocks/media';
